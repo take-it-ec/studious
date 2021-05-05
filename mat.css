@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#000;
+    color:rgb(17, 245, 85);
+}
+
+.container-fluid{
+    height:100%;
+}
+
+a{
+    text-decoration:none;
+    color:rgb(17, 245, 85);
+}
+.swiper-container {
+    width: 100%;
+    height: 350px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+display: grid;
+place-items:center;
+border:2px solid rgb(17, 245, 85);
+border-radius:15px;
+    /* Center slide text vertically */
+   
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+hr{
+    background-color:rgb(17, 245, 85);
+}
+.card, .swiper-slide{
+    background-color:#121212;
+}
+
+.table{
+    background: color #121212;
+}
+
+.card-img-top{
+    height:200px;
+}
+
+.btn{
+    background-color:rgb(17, 245, 85);
+    font-weight:700;
+  
+}
+
+figure {
+    display:grid;
+    place-items:center;
+    height:100%;
+}
