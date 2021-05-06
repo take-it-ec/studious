@@ -30,8 +30,10 @@ place-items:center;
 border:2px solid rgb(17, 245, 85);
 border-radius:15px;
     /* Center slide text vertically */
-   
+   /* position:relative; */
   }
+
+  iframe
 
   .swiper-slide img {
     display: block;
