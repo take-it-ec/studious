@@ -23,6 +23,11 @@ form{
     border-radius:15px;
 }
 
+a{
+    text-decoration:none;
+    color:rgb(17, 245, 85);
+}
+
 .container-fluid{
     position:relative;
 }
