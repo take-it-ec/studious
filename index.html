@@ -10,12 +10,16 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css" integrity="sha512-SYBBAnJsPEzSQ/kBqkR/9krJ+EUgF624c8uaMBww1Q26pnCw5k7zVmtc48BfXjZ9MRNNBveIdhx/na1xRLWgjw==" crossorigin="anonymous" />
 <title>Semester-4-ktu</title>
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+    
+<!-- <script src=" https://firebase.google.com/docs/web/setup#available-libraries"></script> -->
 
 <script>
   // Your web app's Firebase configuration
@@ -30,15 +34,53 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  function writeData(){
-    alert('helloworld')
+//   function writeData(){
+//     // alert('helloworld')
 
-    firebase.database().ref("User").set({
-        name: document.getElementById("username").value,
-        password: document.getElementById("password").value
-    });
+
+//     firebase.database().ref("User").set({
+//         name : "athulbabu",
+//         password: "password",
+//         pagename: "private"
+//     });
+// }
+
+function retrieveData(){
+    firebase.database().ref("User").once("value", function(snapshot){
+        var data = snapshot.val()
+        var arr = []
+        for(let i in data){
+            console.log(data[i])
+           arr.push(data[i])
+           
+        }
+        console.log(arr)
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        console.log(arr[0])
+        console.log(arr[1])
+        console.log(arr[2])
+        console.log(username)
+        console.log(password)
+        if(username == arr[0]){
+            if(password == arr[2]){
+                window.location.href = arr[1] + '.html';
+            }else{
+                console.log(arr[1])
+                alert('i have told you not to click');
+                window.location.href = `https://www.justdial.com/Thiruvananthapuram/Mental-Health-Care-Oolampara/0471PX471-X471-140630103046-N3E6_BZDET`;
+            }
+        }else{
+            alert(`don't do this again`);
+            window.location.href = `https://www.justdial.com/Thiruvananthapuram/Mental-Health-Care-Oolampara/0471PX471-X471-140630103046-N3E6_BZDET`;
+
+        }
+    })
+   
 }
-  
+
+// writeData();
+//   retrieveData();
 </script>
 </head>
 <body>
@@ -63,7 +105,7 @@
 <input type="text" id = 'password'>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn" onclick = "writeData()">Submit</button>
+                <button type="button" class="btn" onclick = "retrieveData()">Submit</button>
             </div>
         </div>
     </div>
