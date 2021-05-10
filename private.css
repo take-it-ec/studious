@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#000;
+    color:rgb(17, 245, 85);
+}
+
+.container-fluid{
+    height:100%;
+}
+
+a{
+    text-decoration:none;
+    color:rgb(17, 245, 85);
+}
+
+hr{
+    background-color:rgb(17, 245, 85);
+}
+.card, .swiper-slide{
+    background-color:#121212;
+}
+
+
+
+.btn{
+    background-color:rgb(17, 245, 85);
+    font-weight:700;
+  
+}
+
