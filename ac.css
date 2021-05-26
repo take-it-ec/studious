@@ -49,6 +49,7 @@ hr{
 
 .table{
     background: color #121212;
+    
 }
 
 .card-img-top{
@@ -65,4 +66,15 @@ figure {
     display:grid;
     place-items:center;
     height:100%;
+}
+
+@media screen and (max-width:600px){
+    .outerTable{
+        width:100%;
+        overflow-x:scroll;
+    }
+
+    .table{
+        width:1000px;
+    }
 }
