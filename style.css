@@ -33,6 +33,7 @@ hr{
 .navbar .navbar-nav .nav-item .nav-link{
     color:rgb(17, 245, 85);
     font-weight:600;
+    margin-left:30px;
    
 }
 .navbar{
@@ -48,4 +49,19 @@ hr{
     color:#000;
     border-radius:10px;
 
+}
+
+a{
+    text-decoration:none;
+
+}
+
+
+
+@media screen and (max-width:778px){
+
+
+    .navbar .navbar-nav .nav-item .nav-link{
+        padding-left:10px;
+    }
 }
