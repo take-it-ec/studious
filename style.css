@@ -29,3 +29,23 @@ hr{
     margin-left:100%;
     transform:translateX(-100%);    
 }
+
+.navbar .navbar-nav .nav-item .nav-link{
+    color:rgb(17, 245, 85);
+    font-weight:600;
+   
+}
+.navbar{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.navbar .navbar-brand{
+    color:rgb(17, 245, 85);
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    background-color:rgb(17, 245, 85);
+    color:#000;
+    border-radius:10px;
+
+}
