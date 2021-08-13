@@ -57,6 +57,18 @@ a{
 }
 
 
+abbr{
+    text-decoration:none;
+   
+
+}
+abbr:hover{
+    color:#000;
+    background-color:rgb(17, 245, 85);
+    padding:5px;
+    font-weight:600;
+}
+
 
 @media screen and (max-width:778px){
 
